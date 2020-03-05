@@ -1,0 +1,48 @@
+{
+    "version": 2,
+    "name": "Atom 3 Lite",
+    "inherits": "atom3",
+    "metadata": {
+		  "platform_offset": [0, -5, 0],
+		  "preferred_variant_name": "PTFE hotend + 0.4mm brass nozzle",
+		  "platform": "Atom 3 lite bed.stl"
+    },
+
+    "overrides": {
+       "machine_head_with_fans_polygon":
+       {
+           "default_value":
+           [
+               [50, 25],
+               [50, -10],
+               [-50, -10],
+               [-50, 25]
+           ]
+       },
+       
+		  "default_material_print_temperature": {
+           "minimum_value_warning": "0",
+           "maximum_value_warning": "230",
+           "maximum_value": "235",
+			  "minimum_value": "0"
+		  },
+         "material_print_temperature": {
+             "minimum_value": "0",
+             "minimum_value_warning": "0",
+             "maximum_value_warning": "230",
+             "maximum_value": "235" 
+			 },
+			"material_print_temperature_layer_0": { "maximum_value": "235"},
+			 		
+        "retraction_amount": { "default_value": 6 },
+		  "retraction_speed": { 
+			  "default_value": 70,
+			  "maximum_value_warning": "90"
+		  },
+		  "retraction_retract_speed": { "maximum_value_warning": "90"},
+		  "retraction_prime_speed": { "maximum_value_warning": "90"},
+		  "retraction_hop_enabled": { "default_value": true}
+	  }
+}
+
+  
