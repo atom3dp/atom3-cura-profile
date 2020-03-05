@@ -1,8 +1,8 @@
-#Layer One Cura files
+# Layer One Cura files
 
 This is a collection of all file related to the Atom line of printers and the slicing software Cura
 
-##Installation Cura 4.X
+## Installation Cura 4.X
 
 **Windows 10:**
 
@@ -39,9 +39,9 @@ This is a collection of all file related to the Atom line of printers and the sl
 12. Click on the “hamburger menu button” (three horizontal lines) and select “Basic”, “Advanced” or “Expert”.
 13. Done
 
-##Contributing
+## Contributing
 
 If you find any issues or want to make a change please open an issue. 
 
-##Project status
+## Project status
 The profiles are currently (2020.03.05) in beta. 
