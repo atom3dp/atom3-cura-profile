@@ -122,16 +122,16 @@
 			 },
           "material_bed_temperature":
           {
-
-              "default_value": 70,
-              "value": "default_material_bed_temperature +10",
+              "default_value": 60,
+              "value": "round(default_material_bed_temperature-((-0.202*default_material_bed_temperature)+7.16)) if default_material_bed_temperature > 40 else default_material_bed_temperature",
               "minimum_value": "0",
               "minimum_value_warning": "build_volume_temperature",
               "maximum_value_warning": "115",
               "maximum_value": "150"
           },
+
 				
-				
+				 
 				  
 		  "speed_print": {
 			  "default_value": 40,
@@ -176,7 +176,7 @@
 			  
 		  
 		
-        "retraction_amount": { "default_value": 6 },
+        "retraction_amount": { "default_value": 7 },
 		  "retraction_speed": { 
 			  "default_value": 70,
 			  "maximum_value_warning": "90"
