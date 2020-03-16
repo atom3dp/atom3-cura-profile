@@ -86,7 +86,15 @@
 		  "infill_sparse_density": { "default_value": 17},
 		  
 		  
-		  
+		  "_material_print_temperature_maximum_value": {
+			  "label": "Maximum Printing Temperature",
+			  "description": "This is a private setting, please ignore",
+			  "unit": "°C",
+			  "type": "float",
+			  "default_value": 235,
+			  "enabled": false,
+			  "settable_per_extruder": true
+		  },
 		  "default_material_print_temperature": {
            "default_value": 200,
            "minimum_value_warning": "0",
@@ -187,6 +195,7 @@
 		  "retraction_hop": { "default_value": 0.5},
 		  
 		  
+		  
 		  "cool_min_layer_time": { "default_value": 5},
         "cool_min_speed": { "default_value": 10},
 		  "cool_lift_head": { "default_value": false},
@@ -194,7 +203,19 @@
 		  
 		  
 		  "adhesion_type": { "default_value": "skirt"},
-		  "skirt_brim_minimal_length": {"default_value": 750}
+		  "skirt_brim_minimal_length": 
+		  {
+			  "default_value": 750,
+			  "value": "60/(layer_height_0*line_width)",
+           "minimum_value": "0",
+           "minimum_value_warning": "25",
+           "maximum_value_warning": "4000"
+		  },
+        "skirt_gap": { "default_value": 10},
+		  
+		  
+		  
+        "adaptive_layer_height_enabled": { "default_value": false}
 	  }
 }
 

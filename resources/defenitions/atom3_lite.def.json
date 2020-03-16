@@ -41,7 +41,17 @@
 		  },
 		  "retraction_retract_speed": { "maximum_value_warning": "90"},
 		  "retraction_prime_speed": { "maximum_value_warning": "90"},
-		  "retraction_hop_enabled": { "default_value": true}
+		  "retraction_hop_enabled": { "default_value": true},
+		  
+		  
+		  
+		  "cool_min_layer_time": { "default_value": 15},
+        "cool_min_speed": { "default_value": 5},
+		  "cool_lift_head": { "default_value": false},
+		  
+		  
+		  
+		  "adaptive_layer_height_enabled": { "default_value": false}
 	  }
 }
 
