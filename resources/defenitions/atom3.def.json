@@ -184,9 +184,9 @@
 			  
 		  
 		
-        "retraction_amount": { "default_value": 7 },
+        "retraction_amount": { "default_value": 3 },
 		  "retraction_speed": { 
-			  "default_value": 70,
+			  "default_value": 50,
 			  "maximum_value_warning": "90"
 		  },
 		  "retraction_retract_speed": { "maximum_value_warning": "90"},
@@ -199,6 +199,12 @@
 		  "cool_min_layer_time": { "default_value": 5},
         "cool_min_speed": { "default_value": 10},
 		  "cool_lift_head": { "default_value": false},
+		  
+		  
+		  
+		  "support_type": { "default_value": "everywhere"},
+		  "support_angle": { "default_value": 70},
+        "support_z_distance": { "default_value": 0.2},
 		  
 		  
 		  
