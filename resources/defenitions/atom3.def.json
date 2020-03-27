@@ -80,6 +80,8 @@
 		  
 		  "wall_thickness": { "default_value": 1.2},
 		  "top_bottom_thickness": { "default_value": 1.2},
+        "xy_offset_layer_0": {"defauylt_vaule": 0},
+
 		  
 		  
 		  
@@ -203,8 +205,19 @@
 		  
 		  
 		  "support_type": { "default_value": "everywhere"},
-		  "support_angle": { "default_value": 70},
+		  "support_angle": { "default_value": 60},
         "support_z_distance": { "default_value": 0.2},
+		  "support_top_distance": { 
+			  "default_value": 0.4,
+			  "value": "extruderValue(support_roof_extruder_nr if support_roof_enable else support_infill_extruder_nr, 'support_xy_distance_overhang')"
+		  },
+		  "support_bottom_distance": { "default_value": 0.2},
+		  "support_xy_distance_overhang":{
+	        "default_value": 0.4,
+	        "value": "machine_nozzle_size"
+		  },
+
+		  
 		  
 		  
 		  
