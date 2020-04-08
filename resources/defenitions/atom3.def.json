@@ -46,6 +46,7 @@
 
 
 
+
 	"overrides": {
 		
 		"machine_name": { "default_value": "Atom 3" },
@@ -83,7 +84,7 @@
 		"extrude_prime_pos_z": { "default_value": 10},
 		"extrude_prime_pos_abs": { "default_value": true},
 		"machine_start_gcode": {
-			"default_value": ";MACHINE START CODE\nG21 ;metric values\nG90 ;absolute positioning\nG28 ;home\nG1 X128.42 Y-41.62 Z0.2 F9000\nG2 X-110.58 Y-77.43 R135 E30 F1200\n;MACHINE START CODE"
+			"default_value": ";MACHINE START CODE\nG21 ;metric values\nG90 ;absolute positioning\nG28 ;home\nG1 Z5 F9000\n;MACHINE START CODE"
 		},
 		"machine_end_gcode": {
 			"default_value": ";MACHINE END CODE\nG91 ;relative positioning\nG1 E-1 F300  ;retract  filament release pressure\nG1 Z+1.0 E-5 F9000 ;move up a and retract more\nG90 ;absolute positioning\nG28; home\nM84 ;steppers off\n;MACHINE END CODE"
@@ -110,6 +111,8 @@
 	
 			
 		"infill_sparse_density": { "default_value": 17},
+		"infill_before_walls": { "deault_value": false},
+		"zig_zaggify_infill": { "default_value": true},
 			 
 		  
 
@@ -249,7 +252,7 @@
 
 
 		   
-		"adhesion_type": { "default_value": "none"},
+		"adhesion_type": { "default_value": "skirt"},
 		"skirt_brim_minimal_length": 
 		{
 			"default_value": 750,
@@ -258,7 +261,10 @@
 			"minimum_value_warning": "25",
 			"maximum_value_warning": "4000"
 		},
-		"skirt_gap": { "default_value": 10},
+		"skirt_gap": { 
+			"default_value": "1`",
+			"value": "3*wall_line_width_0"
+		},
 
 
 
@@ -266,4 +272,3 @@
 		"adaptive_layer_height_enabled": { "default_value": false}
 	}
 }
-  
