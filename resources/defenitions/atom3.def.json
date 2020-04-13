@@ -59,13 +59,15 @@
 		"machine_nozzle_head_distance": {"default_value": 6},
 		"machine_head_with_fans_polygon":
 		{
-			"default_value":
-			[
-				[50, 25],
-				[50, -10],
-				[-50, -10],
-				[-50, 25]
-			]
+			"default_value":[
+			  [-23.82, 51.25],
+			  [23.82, 51.25],
+			  [56.292 , -5.00],
+			  [32.476, -46.250],
+						
+			  [-32.476, -46.25],
+			  [-56.292, -5.00]
+		  ]
 		},
 		"machine_gcode_flavor": { "RepRap (Marlin/Sprinter)": "Marlin" },
 		"machine_heated_bed": { "default_value": true },
