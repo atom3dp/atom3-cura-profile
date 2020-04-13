@@ -11,7 +11,7 @@
 		"has_materials": true,
 		"preferred_material": "generic_pla",
 		"has_variants": true,
-		"preferred_variant_name": "All metal hotend + 0.4mm brass nozzle",
+		"preferred_variant_name": "PTFE hotend + 0.4mm brass nozzle",
 		"preferred_quality_type": "normal",
 		"variants_name": "Tool:",
 		"nozzle_offsetting_for_disallowed_areas": false,
