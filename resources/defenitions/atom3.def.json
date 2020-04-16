@@ -113,8 +113,14 @@
 	
 			
 		"infill_sparse_density": { "default_value": 17},
-		"infill_before_walls": { "deault_value": false},
-		"zig_zaggify_infill": { "default_value": true},
+		"infill_before_walls": {
+			 "deault_value": false,
+			 "value": false
+		 },
+		"zig_zaggify_infill": { 
+			"default_value": true,
+			"value": true
+		},
 			 
 		  
 
