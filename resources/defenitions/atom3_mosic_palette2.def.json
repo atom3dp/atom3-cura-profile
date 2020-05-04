@@ -3,7 +3,7 @@
 	"name": "Atom 3 Mosaic Palette 2",
 	"inherits": "atom3",
 	"metadata": {
-		"author": "Daniel Kurth (intern)",
+		"author": "Daniel Kurth",
 		"manufacturer": "Layer One",
 		"machine_extruder_trains":{
 			"0": "atom3_mosaic_palette2_ext0",

@@ -3,9 +3,11 @@
     "name": "Atom 3 Lite",
     "inherits": "atom3",
     "metadata": {
-		  "platform_offset": [0, 0, 0],
-		  "preferred_variant_name": "PTFE hotend + 0.4mm brass nozzle",
-		  "platform": "Atom 3 lite bed.stl"
+		 "author": "Daniel Kurth",
+		 "manufacturer": "Layer One",
+		 "platform_offset": [0, 0, 0],
+		 "preferred_variant_name": "PTFE hotend + 0.4mm brass nozzle",
+		 "platform": "Atom 3 lite bed.stl"
     },
 
     "overrides": {
