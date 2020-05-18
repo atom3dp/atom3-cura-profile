@@ -29,3 +29,5 @@ Temporary Items
 .png
 .jpg
 
+# Ignore all files stored in "old" folders
+**/old
