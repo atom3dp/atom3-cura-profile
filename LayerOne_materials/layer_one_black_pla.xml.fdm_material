@@ -17,15 +17,15 @@
 	 <instruction_link>https://atom3dp.squarespace.com/filament-en</instruction_link>
 	 <author>
 		 <organization>Layer One</organization>
-		 <contact>Daniel Kurth (intern)</contact><!-- Update -->
-		 <email>software@kurth.online</email><!-- Update -->
+		 <contact>Daniel Kurth</contact>
+		 <email>software@kurth.online</email>
 	 </author>
  </metadata>
  
   <properties>
     <diameter>1.75</diameter>
     <density>1.124</density><!-- Unknown if this is correct -->
-	 <weight>1000</weight><!-- Unknown if this is correct -->
+	 <weight>1000</weight>
   </properties>
   
   <settings>
@@ -37,17 +37,11 @@
 	 <machine>
 		 <machine_identifier manufacturer="Layer One" product="Atom 3" />
 		 <setting key="hardware compatible">yes</setting>
-		 <setting key="heated bed temperature">70</setting>
-		 <setting key="print temperature">200</setting>
-		 <!-- Add retraction settings -->
 	 </machine>
 	 
 	 <machine>
 		 <machine_identifier manufacturer="Layer One" product="Atom 3 Lite" />
 		 <setting key="hardware compatible">yes</setting>
-		 <setting key="heated bed temperature">70</setting>
-		 <setting key="print temperature">200</setting>
-		 <!-- Add retraction settings -->
 	 </machine>
 	 
  </settings>
