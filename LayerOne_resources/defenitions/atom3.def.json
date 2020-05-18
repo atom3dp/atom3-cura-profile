@@ -9,7 +9,7 @@
 		"platform_offset": [0, -40, 0],
 		"has_machine_quality": false,
 		"has_materials": true,
-		"preferred_material": "generic_pla",
+		"preferred_material": "layer_one_black_pla",
 		"has_variants": true,
 		"preferred_variant_name": "PTFE hotend + 0.4mm brass nozzle",
 		"preferred_quality_type": "normal",
