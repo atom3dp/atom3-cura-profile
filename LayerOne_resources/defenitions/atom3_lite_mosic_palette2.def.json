@@ -13,6 +13,9 @@
 		}
 	},
 	
+	
+	
+	
 	"overrides": {
 		"machine_extruder_count": { "default_value": 4 },
 		"machine_name": { "default_value": "Atom 3 lite Mosaic Palette 2" },

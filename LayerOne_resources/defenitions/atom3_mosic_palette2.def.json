@@ -20,6 +20,5 @@
 		
 		
 		"machine_extruders_share_heater": { "default_value": true}
-		
 	}
 }
