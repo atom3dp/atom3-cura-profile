@@ -80,8 +80,11 @@
 		
 		
 		
-		"layer_height": { "default_value": 0.2 },
-		"layer_height_0": { "default_value": 0.3 },
+		"layer_height": {"default_value": 0.2 },
+		"layer_height_0": {
+			"default_value": 0.3,
+			"value": "min(round(0.75*machine_nozzle_size,2),0.3) if layer_height < 0.3 else layer_height"
+		 },
 		"line_width": { "value": "machine_nozzle_size"},
 		"infill_line_width": { "value":"line_width * 1.6"},
 		"initial_layer_line_width_factor": { "default_value": 100},
