@@ -14,11 +14,7 @@
 		"preferred_variant_name": "PTFE hotend + 0.4mm brass nozzle",
 		"preferred_quality_type": "normal",
 		"variants_name": "Tool:",
-		"nozzle_offsetting_for_disallowed_areas": false,
-		"platform": "Atom 3 bed.stl",
-		"supports_usb_connection": false,
-		"supports_network_connection": false,
-		  
+		"platform": "Atom 3 bed.stl",		  
 		"machine_extruder_trains":
 		{
 			"0": "atom3_extruder_0"
@@ -50,39 +46,28 @@
 	"overrides": {
 		
 		"machine_name": { "default_value": "Atom 3" },
-		"machine_show_variants": {"default_value": true},
+		"machine_show_variants": { "default_value": true},
 		"machine_shape": { "default_value": "elliptic" },
 		"machine_width": { "default_value": 270},
 		"machine_depth": { "default_value": 270},
 		"machine_height": { "default_value": 340},
 		"machine_center_is_zero": { "default_value": true},
-		"machine_nozzle_head_distance": {"default_value": 6},
+		"machine_nozzle_head_distance": { "default_value": 6},
 		"machine_head_with_fans_polygon":
 		{
 			"default_value":[
-			  [-23.82, 51.25],
-			  [23.82, 51.25],
-			  [56.292 , -5.00],
-			  [32.476, -46.250],
+				[-23.82, 51.25],
+				[23.82, 51.25],
+				[56.292 , -5.00],
+				[32.476, -46.250],
 						
-			  [-32.476, -46.25],
-			  [-56.292, -5.00]
-		  ]
+				[-32.476, -46.25],
+				[-56.292, -5.00]
+			]
 		},
 		"machine_gcode_flavor": { "RepRap (Marlin/Sprinter)": "Marlin" },
 		"machine_heated_bed": { "default_value": true },
-		"machine_max_feedrate_x": { "default_value": 300},
-		"machine_max_feedrate_y": { "default_value": 300},
-		"machine_max_feedrate_z": { "default_value": 100},
-		"machine_max_feedrate_e": { "default_value": 100},
-		"machine_max_acceleration_x": { "default_value": 9000},
-		"machine_max_acceleration_y": { "default_value": 9000},
-		"machine_max_acceleration_z": { "default_value": 100},
-		"machine_acceleration": { "default_value": 3000},
-		"machine_max_jerk_xy": { "default_value": 20},
-		"machine_max_jerk_z": {"default_value": 0.4},
-		"machine_max_jerk_e": {"default_value": 5.0},
-		"material_diameter": {"default_value": 1.75},
+		"material_diameter": { "default_value": 1.75},
 		"extrude_prime_pos_z": { "default_value": 10},
 		"extrude_prime_pos_abs": { "default_value": true},
 		"machine_start_gcode": {
@@ -91,43 +76,41 @@
 		"machine_end_gcode": {
 			"default_value": ";MACHINE END CODE\nG91 ;relative positioning\nG1 E-1 F300  ;retract  filament release pressure\nG1 Z+1.0 E-5 F9000 ;move up a and retract more\nG90 ;absolute positioning\nG28; home\nM84 ;steppers off\n;MACHINE END CODE"
 		},
-
-	
-	
-	
+		
+		
+		
 		
 		"layer_height": { "default_value": 0.2 },
 		"layer_height_0": { "default_value": 0.3 },
 		"line_width": { "value": "machine_nozzle_size"},
 		"infill_line_width": { "value":"line_width * 1.6"},
 		"initial_layer_line_width_factor": { "default_value": 100},
-	
-	
-	
-		  
+		
+		
+		
+		
 		"wall_thickness": { "default_value": 1.2},
 		"top_bottom_thickness": { "default_value": 1.2},
-		"xy_offset_layer_0": {"defauylt_vaule": 0},
-			 
-		   
-	
-			
+		
+		
+		
+		
 		"infill_sparse_density": { "default_value": 17},
 		"infill_before_walls": {
-			 "deault_value": false,
-			 "value": false
-		 },
+			"deault_value": false,
+			"value": false
+		},
 		"zig_zaggify_infill": { 
 			"default_value": true,
 			"value": true
 		},
-			 
-		  
-
-
+		
+		
+		
+		
 		"_material_print_temperature_maximum_value": {
 			"label": "Maximum Printing Temperature",
-			"description": "This is a private setting, please ignore",
+			"description": "This is a private setting, please ignore. It is used to set the max prinnting and warnning temperatures based on the used hotend.",
 			"unit": "°C",
 			"type": "float",
 			"default_value": 235,
@@ -154,7 +137,7 @@
 			"maximum_value_warning": "material_print_temperature + 10",
 			"maximum_value": "_material_print_temperature_maximum_value"
 		},
-		"material_initial_print_temperature": { 
+		"material_initial_print_temperature": {
 			"value": "material_print_temperature_layer_0",
 			"minimum_value_warning": "material_print_temperature_layer_0 - 10",
 			"maximum_value_warning": "material_print_temperature_layer_0 + 10"
@@ -176,42 +159,42 @@
 			"maximum_value_warning": "115",
 			"maximum_value": "150"
 		},
-	
-
-
-			  
+		
+		
+		
+		
 		"speed_print": {
 			"default_value": 40,
 			"maximum_value_warning": "100"
 		},
 		"speed_infill": { "maximum_value_warning": "100"},
-		"speed_wall": { 
+		"speed_wall": {
 			"value": "speed_print * 0.75",
 			"maximum_value_warning": "100"
 		},
-		"speed_wall_0": { 
+		"speed_wall_0": {
 			"value": "speed_print * 0.5",
 			"maximum_value_warning": "100"
 		},
-		"speed_wall_x": { 
+		"speed_wall_x": {
 			"value": "speed_print * 0.75",
 			"maximum_value_warning": "100"
 		},
-		"speed_roofing": {"maximum_value_warning": "100"},
-		"speed_topbottom": {"maximum_value_warning": "100"},
-		"speed_support": {"maximum_value_warning": "100"},
-		"speed_support_infill": {"maximum_value_warning": "100"},
-		"speed_support_interface": {"maximum_value_warning": "100"},
-		"speed_support_roof": {"maximum_value_warning": "100"},
-		"speed_support_bottom": {"maximum_value_warning": "100"},
-		"speed_prime_tower": {"maximum_value_warning": "100"},
+		"speed_roofing": { "maximum_value_warning": "100"},
+		"speed_topbottom": { "maximum_value_warning": "100"},
+		"speed_support": { "maximum_value_warning": "100"},
+		"speed_support_infill": { "maximum_value_warning": "100"},
+		"speed_support_interface": { "maximum_value_warning": "100"},
+		"speed_support_roof": { "maximum_value_warning": "100"},
+		"speed_support_bottom": { "maximum_value_warning": "100"},
+		"speed_prime_tower": { "maximum_value_warning": "100"},
 		"speed_travel": {
 			"default_value": 120,
 			"minimum_value": "0.1",
 			"maximum_value_warning": "150",
 			"value": "speed_print if magic_spiralize else 120"
 		},
-		"speed_layer_0": { 
+		"speed_layer_0": {
 			"default_value": 20,
 			"value": 20,
 			"maximum_value_warning": "100"
@@ -220,30 +203,29 @@
 		"speed_travel_layer_0": { "maximum_value_warning": "100"},
 		"skirt_brim_speed": { "maximum_value_warning": "100"},
 		"speed_slowdown_layers": { "default_value": 1},
-
-
-
-
+		
+		
+		
+		
 		"retraction_amount": { "default_value": 3 },
 		"retraction_speed": { 
 			"default_value": 50,
 			"maximum_value_warning": "90"
 		},
 		"retraction_retract_speed": { "maximum_value_warning": "90"},
-		"retraction_prime_speed": { "maximum_value_warning": "90"},
 		"retraction_hop_enabled": { "default_value": true},
 		"retraction_hop": { "default_value": 0.5},
-
-
-
-
+		
+		
+		
+		
 		"cool_min_layer_time": { "default_value": 5},
 		"cool_min_speed": { "default_value": 10},
 		"cool_lift_head": { "default_value": false},
-
-		  
-
-		  
+		
+		
+		
+		
 		"support_type": { "default_value": "everywhere"},
 		"support_angle": { "default_value": 60},
 		"support_z_distance": { "default_value": 0.2},
@@ -256,13 +238,12 @@
 			"default_value": 0.4,
 			"value": "machine_nozzle_size"
 		},
-
-
-
-		   
+		
+		
+		
+		
 		"adhesion_type": { "default_value": "skirt"},
-		"skirt_brim_minimal_length": 
-		{
+		"skirt_brim_minimal_length": {
 			"default_value": 750,
 			"value": "60/(layer_height_0*line_width)",
 			"minimum_value": "0",
@@ -273,10 +254,5 @@
 			"default_value": "1`",
 			"value": "3*wall_line_width_0"
 		},
-
-
-
-
-		"adaptive_layer_height_enabled": { "default_value": false}
 	}
 }
