@@ -1,91 +1,37 @@
 {
-	"version": 2,
-	"name": "Atom 3.5",
-	"inherits": "fdmprinter",
-	"metadata": {
+    "version": 2,
+    "name": "Atom 3.5",
+    "inherits": "fdmprinter",
+    "metadata": {
 		"visible": true,
-		"author": "Daniel Kurth",
+		"author": "Victor",
 		"manufacturer": "Layer One",
-		"platform_offset": [456, 70, -127],
-		"has_machine_quality": false,
+        "platform_offset": [456, 70, -127],
+        "has_machine_quality": false,
 		"has_materials": true,
-		"preferred_material": "layer_one_black_pla",
-		"has_variants": true,
-		"preferred_variant_name": "PTFE hotend + 0.4mm brass nozzle",
-		"preferred_quality_type": "normal",
-		"variants_name": "Tool:",
+        "preferred_material": "layer_one_black_pla",
+        "preferred_variant_name": "PTFE hotend + 0.4mm brass nozzle",
+        "preferred_quality_type": "normal",
+        "variants_name": "Tool:",
 		"platform": "Atom 3.5 bed.stl",		  
 		"machine_extruder_trains":
-		{
-			"0": "atom3_5extruder_0",
-			"1": "atom3_5extruder_1"
-			
-		}
-	},
-	
-	
-	
-	"settings": {
-		"material": {
-			"children": {
-				"_material_print_temperature_maximum_value": {
-					"label": "Maximum Printing Temperature",
-					"description": "This setting is used to set the maximum printing temperature value based on the used hot ends",
-					"unit": "°C",
-					"type": "float",
-					"default_value": 235,
-					"enabled": false,
-					"settable_per_extruder": true
-				}
-			}
+         {
+            "0": "atom3_5extruder_01",
+            "1": "atom3_5extruder_02"
 		},
-		
-		"travel": {
-			"children": {
-				"_retraction_amount_max_warning":
-				{
-					"label": "Maximum suggested retraction distance.",
-					"description": "Private setting used to set the maximum suggested retraction distance based on used hotend type.",
-					"unit": "mm",
-					"type": "float",
-					"default_value": 3.0,
-					"enabled": false,
-					"settable_per_extruder": true
-				},
-				"_retraction_speed_max_warning":
-				{
-					"label": "Maximum suggested retraction speed based on used hotend type.",
-					"description": "Private setting used to set the maximum suggested retraction speed based on used hotend type.",
-					"unit": "mm/s",
-					"type": "float",
-					"default_value": 79,
-					"enabled": false,
-					"settable_per_extruder": true
-				}
-			}
-		}
-	},
+		"first_start_actions": ["MachineSettingsAction"]
+    },
+    "overrides": {
 
 
-
-
-
-	"overrides": {
-
-		"machine_extruder_count": { "default_value": 2 },
-	
-
-	"machine_name": { "default_value": "Atom 3.5" },
-	"machine_extruders_share_heater": { "default_value": true},
-
-		"machine_show_variants": { "default_value": true},
-		"machine_shape": { "default_value": "elliptic" },
-		"machine_width": { "default_value": 270},
-		"machine_depth": { "default_value": 270},
-		"machine_height": { "default_value": 340},
-		"machine_center_is_zero": { "default_value": true},
-		"machine_nozzle_head_distance": { "default_value": 6},
-		"machine_head_with_fans_polygon":
+	"machine_show_variants": { "default_value": true},
+    "machine_shape": { "default_value": "elliptic" },
+    "machine_width": { "default_value": 270},
+	"machine_depth": { "default_value": 270},
+    "machine_height": { "default_value": 340},
+    "machine_center_is_zero": { "default_value": true},
+    "machine_nozzle_head_distance": { "default_value": 6},
+    "machine_head_with_fans_polygon":
 		{
 			"default_value":[
 				[-23.82, 51.25],
@@ -96,8 +42,8 @@
 				[-32.476, -46.25],
 				[-56.292, -5.00]
 			]
-		},
-		"machine_gcode_flavor": { "RepRap (Marlin/Sprinter)": "Marlin" },
+        },
+        "machine_gcode_flavor": { "RepRap (Marlin/Sprinter)": "Marlin" },
 		"machine_heated_bed": { "default_value": true },
 		"material_diameter": { "default_value": 1.75},
 		"extrude_prime_pos_z": { "default_value": 10},
@@ -106,13 +52,10 @@
 			"default_value": ";MACHINE START CODE\nG21 ;metric values\nG90 ;absolute positioning\nG28 ;home\nG1 Z5 F9000\n;MACHINE START CODE"
 		},
 		"machine_end_gcode": {
-			"default_value": ";MACHINE END CODE\nG28 X0 Y0 Z0;home xyz\nM104 S0;extruder heater off\nM140 S0;heated bed heater off\nM107;turn off fans\nM84;steppers off\n;MACHINE END CODE"
+			"default_value": ";MACHINE END CODE\nG28 X0 Y0; Home X and Y\nM104 S0 ; turn off extruder\nM140 S0 ; turn off bed\nM107; turn off fans\nM84 ;steppers off\n;MACHINE END CODE"
 		},
-		
-		
-		
-		
-		"layer_height": {"default_value": 0.2 },
+        
+        "layer_height": {"default_value": 0.2 },
 		"layer_height_0": {
 			"default_value": 0.3,
 			"value": "min(round(0.75*machine_nozzle_size,2),0.3) if layer_height < 0.3 else layer_height"
@@ -120,17 +63,9 @@
 		"line_width": { "value": "machine_nozzle_size"},
 		"infill_line_width": { "value":"line_width * 1.6"},
 		"initial_layer_line_width_factor": { "default_value": 100},
-		
-		
-		
-		
 		"wall_thickness": { "default_value": 1.2},
 		"top_bottom_thickness": { "default_value": 1.2},
-		
-		
-		
-		
-		"infill_sparse_density": { "default_value": 17},
+		"infill_sparse_density": { "default_value": 15},
 		"infill_before_walls": {
 			"deault_value": false,
 			"value": false
@@ -139,64 +74,6 @@
 			"default_value": true,
 			"value": true
 		},
-		
-		
-		
-		
-		"_material_print_temperature_maximum_value": {
-			"label": "Maximum Printing Temperature",
-			"description": "This is a private setting, please ignore. It is used to set the max prinnting and warnning temperatures based on the used hotend.",
-			"unit": "°C",
-			"type": "float",
-			"default_value": 235,
-			"enabled": false,
-			"settable_per_extruder": true
-		},
-		"default_material_print_temperature": {
-			"default_value": 200,
-			"minimum_value_warning": "0",
-			"maximum_value_warning": "_material_print_temperature_maximum_value-5",
-			"maximum_value": "_material_print_temperature_maximum_value",
-			"minimum_value": "0"
-		},
-		"material_print_temperature": {
-			"minimum_value": "0",
-			"minimum_value_warning": "0",
-			"maximum_value_warning": "_material_print_temperature_maximum_value-5",
-			"maximum_value": "_material_print_temperature_maximum_value" 
-		},
-		"material_print_temperature_layer_0": {
-			"value": "material_print_temperature + 0",
-			"minimum_value": "0",
-			"minimum_value_warning": "material_print_temperature - 10",
-			"maximum_value_warning": "material_print_temperature + 10",
-			"maximum_value": "_material_print_temperature_maximum_value"
-		},
-		"material_initial_print_temperature": {
-			"value": "material_print_temperature_layer_0",
-			"minimum_value_warning": "material_print_temperature_layer_0 - 10",
-			"maximum_value_warning": "material_print_temperature_layer_0 + 10"
-		},
-		"material_final_print_temperature": { "value": "material_print_temperature"},
-		"default_material_bed_temperature": {
-			"default_value": 60,
-			"minimum_value": "0",
-			"minimum_value_warning": "build_volume_temperature",
-			"maximum_value_warning": "115",
-			"maximum_value": "120"
-		},
-		"material_bed_temperature":
-		{
-			"default_value": 60,
-			"value": "round(default_material_bed_temperature-((-0.202*default_material_bed_temperature)+7.16)) if default_material_bed_temperature > 40 else default_material_bed_temperature",
-			"minimum_value": "0",
-			"minimum_value_warning": "build_volume_temperature",
-			"maximum_value_warning": "115",
-			"maximum_value": "120"
-		},
-		
-		
-		
 		
 		"speed_print": {
 			"default_value": 60,
@@ -251,7 +128,7 @@
 		},
 		"retraction_retract_speed": { "maximum_value_warning": "_retraction_speed_max_warning"},
 		"retraction_prime_speed": { "maximum_value_warning": "_retraction_speed_max_warning"},
-		"retraction_hop_enabled": { "default_value": false},
+		"retraction_hop_enabled": { "default_value": true},
 		"retraction_hop": { "default_value": 0.5},
 		
 		
@@ -277,9 +154,6 @@
 			"value": "machine_nozzle_size"
 		},
 		
-		
-		
-		
 		"adhesion_type": { "default_value": "skirt"},
 		"skirt_brim_minimal_length": {
 			"default_value": 750,
@@ -294,3 +168,9 @@
 		}
 	}
 }
+
+    
+
+
+
+ 
